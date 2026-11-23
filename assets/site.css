@@ -729,3 +729,13 @@ input[type=range]:active::-webkit-slider-thumb{transform:scale(1.15)}
   .megamarq .tr{animation:none}
   .glow{animation:none}
 }
+
+/* aviso de cookies */
+.ck{position:fixed;left:20px;bottom:20px;z-index:60;max-width:380px;background:var(--noite);color:var(--papel);border-radius:22px;padding:20px 22px;box-shadow:0 24px 50px -20px rgba(0,0,0,.55);opacity:0;transform:translateY(16px);transition:opacity .35s var(--ease),transform .35s var(--ease)}
+.ck.on{opacity:1;transform:none}
+.ck p{font-size:14.5px;line-height:1.5;color:#C9D1DE}
+.ck a{color:var(--cobl)}
+.ckb{display:flex;gap:10px;margin-top:14px}
+.ck .btn.ghost{color:var(--papel)}
+.ckopen{background:none;border:0;padding:0;font:inherit;color:inherit;text-decoration:underline;cursor:pointer}
+@media(max-width:700px){.ck{left:12px;right:12px;bottom:84px;max-width:none}}

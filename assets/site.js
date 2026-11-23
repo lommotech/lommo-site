@@ -428,3 +428,20 @@ if(FINE&&!RM){
   });
 }
 })();
+
+/* aviso de cookies e consentimento do Google Analytics */
+(function(){
+  var ck=document.getElementById('ck');if(!ck)return;
+  function get(){try{return localStorage.getItem('lommo_cookies')}catch(e){return null}}
+  function set(v){try{localStorage.setItem('lommo_cookies',v)}catch(e){}}
+  function show(){ck.hidden=false;requestAnimationFrame(function(){ck.classList.add('on')})}
+  function hide(){ck.classList.remove('on');setTimeout(function(){ck.hidden=true},350)}
+  if(!get())setTimeout(show,900);
+  ck.addEventListener('click',function(e){
+    var b=e.target.closest('[data-ck]');if(!b)return;
+    var v=b.getAttribute('data-ck');set(v);
+    if(typeof gtag==='function')gtag('consent','update',{analytics_storage:v==='aceito'?'granted':'denied'});
+    hide();
+  });
+  document.querySelectorAll('[data-ck-open]').forEach(function(b){b.addEventListener('click',show)});
+})();
