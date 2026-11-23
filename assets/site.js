@@ -289,7 +289,7 @@ if(fw){
   var rules={
     nome:function(v){return v.trim().split(/\s+/).length>=2||'Escreva o nome completo, com sobrenome.'},
     cargo:function(v){return v.trim().length>=2||'Informe o seu cargo ou função.'},
-    empresa:function(v){return v.trim().length>=2||'Informe o nome da empresa ou do seu negócio.'},
+    site:function(v){return v.trim().length>=2||'Informe o site da empresa. Se ainda não tiver, coloque o Instagram ou escreva “não tenho”.'},
     telefone:function(v){var n=v.replace(/\D/g,'');return (n.length===10||n.length===11)||'Informe um telefone com DDD.'},
     email:function(v){return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim())||'Confira o e-mail. Ele precisa ter o formato nome@empresa.com.'}
   };

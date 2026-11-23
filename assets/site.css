@@ -377,6 +377,8 @@ input[type=range]:active::-webkit-slider-thumb{transform:scale(1.15)}
 .fld textarea{min-height:110px;resize:vertical}
 .fld input:focus,.fld textarea:focus{border-color:var(--cob);background:#fff}
 .fld input::placeholder,.fld textarea::placeholder{color:#8B93A3}
+.fld .hint{color:var(--graf);font-size:13px;margin-top:6px}
+.fld.bad .hint{display:none}
 .fld .err{display:none;color:#B4321A;font-size:13.5px;margin-top:6px}
 .fld.bad input,.fld.bad textarea{border-color:#C8452B;background:#FFF5F2}
 .fld.bad .err{display:block}
